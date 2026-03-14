@@ -1,0 +1,35 @@
+{
+    "name": "Muun-RAFT_chairs-sintel",
+    "epsilon": 1e-8,
+    "mixed_precision": true,
+    "data_on_cluster": false,
+    "gpus": [0, 1, 2],
+    "grad_acc":[1,1,1,1],
+    "occ_method": ["wan", "wan"],
+    "train": {
+        "iters": [4,4,4],
+            "eval_iters": [[[4,4,4], [4,4,4]], [[4,4,4]]],
+            "num_steps": [75000, 20000],
+            "lr": [0.0002, 0.000125],
+            "dataset": ["chairs", "sintel_un"],
+            "batch_size": [6, 6],
+            "image_size": [[352, 448], [352, 448]],
+            "wdecay": [0.0001, 0.0001],
+            "validation": [["chairs", "sintel"], ["sintel"]],
+            "loss": {"aug_settings": [{"crop_size": [352, 448], "min_scale": 0.0, "max_scale": 1.0, "do_flip": true, "ph_aug": true, "spatial_aug_prob": 0.8, "stretch_prob": 0.8, "center_crop": true}, {"crop_size": [352, 448], "min_scale": 0.0, "max_scale": 1.0, "do_flip": true, "ph_aug": true, "spatial_aug_prob": 0.8, "stretch_prob": 0.8, "center_crop": true}],
+                     "gamma":[0.8, 0.8],
+                     "ar_gamma": [0.95, 0.95],
+                     "sm_weight": [2.0, 8.0],
+                     "sm_order": [1, 1],
+                     "ph_l1_weight": [0.0, 0.0],
+                     "ph_ssim_weight": [0.0, 0.0],
+                     "ph_ternary_weight": [1.0, 1.0],
+                     "ar": true,
+                     "ar_start":[40, 0],
+                     "ar_increasing":10,
+                     "ar_weight":[1.2, 1.2]
+                     }
+             }
+    
+    }
+    
