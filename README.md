@@ -16,6 +16,7 @@ For our <u>S</u>imple <u>Un</u>supervised <u>RAFT</u> (`Sun-RAFT` ☀️) reposi
 [https://github.com/cv-stuttgart/Sun-RAFT](https://github.com/cv-stuttgart/Sun-RAFT)
 
 
+If you find our work useful please [cite via BibTeX](CITATIONS.bib).
 
 ## Requirements
 
@@ -60,3 +61,11 @@ python train_un.py --config config/Muun-RAFT_chairs-kitti.json
 ```
 
 The log files and checkpoints will be saved under the `checkpoints` folder.
+
+## License
+- Our code is licensed under the BSD 3-Clause **No Military** License. See [LICENSE](LICENSE).
+- The provided checkpoints are under the [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
+
+## Acknowledgement
+Parts of this repository are adapted from [Unflow](https://github.com/simonmeister/UnFlow) ([MIT license](https://github.com/simonmeister/UnFlow/blob/master/LICENSE)), [SMURF](https://github.com/google-research/google-research/tree/master/smurf) ([Apache 2.0 license](https://github.com/google-research/google-research/blob/master/LICENSE)), [RAFT](https://github.com/princeton-vl/RAFT) ([MIT license](https://github.com/princeton-vl/RAFT/blob/master/LICENSE)), and [CCMR](https://github.com/cv-stuttgart/CCMR) ([license](https://github.com/cv-stuttgart/CCMR/blob/main/LICENSE)).
+We thank the authors.
